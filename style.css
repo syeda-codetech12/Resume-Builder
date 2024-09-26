@@ -1,0 +1,275 @@
+body{
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0px;
+    background-color: #aae5d9;
+}
+
+h1{
+    text-align: center;
+    color: #005f73;
+    font-size: 65px;
+    font-weight: 800;
+}
+
+#mandatory-expression{
+    display: flex;
+    justify-content:end;
+}
+
+
+form{
+    width: 650px;
+    background-color: #519e9b;
+    border-radius: 8px;
+    box-shadow: 2px 5px 10px 3px rgba(0, 0, 0.10);
+    padding: 25px;
+    margin: auto;
+}
+
+
+fieldset{
+    border: 3px solid #005f73;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #5aa9a7;
+}
+
+legend{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: #540b0e;
+}
+
+label{
+    display: block;
+    margin-top: 15px;
+    color: #540b0e;
+}
+
+
+
+
+#name, #title, #email, #phone, #socialHandles, #school, #degree, #grade, #skills, #position, #company, #duration{
+    width: 600px;
+    height: 22px;
+    border:2px solid #540b0e;
+    border-radius: 4px;
+    background-color: #cce3de;
+}
+
+
+
+#startyear, #endyear{
+    background-color: #cce3de;
+    border:2px solid #540b0e;
+    border-radius: 4px;
+}
+
+textarea{
+    width: 600px;
+    border:2px solid #540b0e;
+    border-radius: 4px;
+    background-color: #cce3de;
+}
+
+.required{
+    position: relative;
+}
+
+.required::after{
+    color: red;
+    content: " * ";
+    font-size: 15px;
+    position: absolute;
+}
+
+button{
+    width: 100px;
+    background-color: #aae5d9;
+    border:2px solid #540b0e;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'arial', 'sans-serif';
+    color: #540b0e;
+    margin-top: 5px;
+}
+
+
+button:hover{
+    background-color: #7bd1c0;
+    cursor: pointer;
+}
+
+
+/* Styling CSS for Resume */
+#resume-section{
+    
+    width: 670px;
+    border:7px solid #450920;
+    border-radius: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #7bd1c0;
+    box-shadow: 2px 5px 10px 3px rgba(0, 0, 0.10);
+    margin: auto;
+    padding: 40px;
+}
+
+#Resume-heading{
+    font-size: 65px;
+    font-weight: bolder;
+    color: #540b0e;
+    background-color: #005f73;
+    border-radius: 6px;
+    border: 4px solid #540b0e;
+    margin-top: 0;
+    text-decoration: 3px double underline #450920 ;
+
+}
+
+h2{
+    color: #0e434d;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0;
+    margin: 5px;
+}
+
+
+
+.horizontalLine{
+    border-bottom: 1px solid #450920; 
+    width: 100%;
+    margin: 10px 0; 
+    box-shadow: 1px 2px 3px 1px #7d6465;
+}
+
+strong{
+    font-size: 23px;
+    font-family: 'serif','Times New Roman', 'Times';
+    margin: 0px 0px 8px 0px;
+    padding: 0;
+    display: block;
+}
+
+
+p{
+    margin: 0px 0px 8px 0px;
+    padding: 0;
+    font-size: 20px;
+}
+
+
+#userpic{
+    max-width: 300px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+
+#username{
+    border-radius: 5px;
+    color: #0e434d;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Arial Narrow Bold', ' Arial ',  'sans-serif';
+    margin-bottom: 10px;
+}
+
+
+#Developer{
+    font-size: 26px;
+    font-family: 'serif';
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+
+#usertitle{
+    text-align: center;
+    color: #0e434d;
+    font-size: 25px;
+    font-family: 'Lucida Sans Unicode', 'Tahoma', 'Verdana';
+    text-transform: capitalize;
+    margin: 0;
+    display: block;
+}
+
+
+#downloadaspdf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: #5aa9a7;
+}
+
+#downloadaspdf:hover{
+    background-color: #418a88;
+    box-shadow: 2px 3px 3px #005f73
+}
+
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    #resume-section, #resume-section * {
+      visibility: visible;
+    }
+    #resume-section {
+      position: absolute;
+      left: 10mm;
+      right: 30mm;
+      top: 20mm;
+      width: calc(100% - 60mm);
+    }
+  }
+  
+
+
+@media (max-width: 600px) {
+/*  CSS styling for smaller screen */
+
+body{
+    margin: 10px;
+}
+
+form{
+    padding: 15px;
+margin-bottom: 20px;
+}
+
+input,textArea{
+    font-size: 14px;
+    padding: 10px;
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+
+img{
+    max-width: 100px;
+}
+
+input[type="submit"]{
+    padding: auto;
+}
+
+#resume-container{
+    padding: 15px;
+    margin-bottom: 20px;
+margin-left: -3px;
+}
+
+}

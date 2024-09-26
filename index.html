@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="ResumeBuilder">Dynamic Resume Builder</h1>
+    <form id="ResumeForm" autocomplete="on">
+       <div id="mandatory-expression"><span class="required" style="margin: 0px 12px 12px;"> </span><span> indicates mandatory field.</span></div>
+       <!-- Personal Details field -->
+        <fieldset id="Personal-Details">
+            <legend>Personal Details</legend>
+            <div>
+            <label for="name" class="required">Name: </label>
+            <input type="text" name="name" placeholder="Enter your name" id="name" maxlength="30">
+            </div>
+            <div>
+            <label for="title" class="required">Professional Title: </label>
+            <input type="text" name="title" placeholder="Enter Tagline here" id="title">
+            </div>
+            <div>
+            <label for="objective">Objective: </label>
+            <textarea name="objective" placeholder="Write an objective" id="objective" rows="6"></textarea>
+            </div>
+            <div>
+                <label for="profile-pic" class="required">Upload Profile Picture</label>
+                <input type="file" name="Picture" id="profile-pic" accept="image/*" onchange="readURL(this)">
+                <br>
+                
+            </div>
+        </fieldset>
+
+        <br>
+
+        <!-- Contact Details Field -->
+
+        <fieldset id="Contact-info">
+            <legend>Contact Info</legend>
+            <label for="email" class="required">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Enter your email here">
+            <label for="phone" class="required">Phone: </label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your phone no. ">
+            <label for="socialHandles">Social Media Handles: </label>
+            <input type="url" name="url" id="socialHandles" placeholder="https://www.example.com/yourprofile">
+        </fieldset>
+
+        <br>
+
+       <!-- Education field -->
+        <fieldset id="Education">
+            <legend>Education</legend>
+            <label for="school" class="required">School: </label>
+            <input type="text" name="School" id="school" placeholder="Ex: Harvard University" >
+            <label for="degree" class="required">Degree: </label>
+            <input type="text" name="degree" id="degree" placeholder="Ex: Master's in Physcology" >
+            <label for="grade" class="required">Grade: </label>
+            <input type="text" name="grade" id="grade">
+            <label for="startyear">Starting Year: </label>
+            <input type="number" name="startyear" id="startyear" min="1900" max="2022" placeholder="Ex: 2000" >
+            <label for="endyear">Ending Year: </label>
+            <input type="number" name="endyear" id="endyear" min="1900" max="2024" placeholder="Ex: 2002">
+        </fieldset>
+
+        <br>
+
+        <!-- Professional Field -->
+
+        <fieldset id="Professional Info">
+
+            <!-- Skills Section -->
+            <legend class="required">Skills</legend>
+            <label for="skills">Skills: </label>
+            <input type="text" name="skills" id="skills" placeholder="Ex: Microsoft Office, HTML etc ">
+        </fieldset>
+
+        <br>
+
+
+        <!-- Experience Section -->
+
+        <fieldset>
+                <legend class="required">Experience</legend>
+                <label for="position">Position: </label>
+                <input type="text" name="Position" id="position" placeholder="Ex: Software Engineer" >
+                <label for="company">Company/Organization: </label>
+                <input type="text" name="Company" id="company" placeholder="Ex: Vortex Solutions">
+                <label for="duration">Duration: </label>
+                <input type="text" name="Duration" id="duration" placeholder="2 years">
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Generate Resume below</button>
+    </form>
+
+
+<br>
+<br>
+
+    <!-- The Resume is generated below -->
+    <h1 id="Resume-heading">Resume</h1>
+
+    <div id="resume-section">
+        <div>
+        <img id="userpic">
+        </div>
+        <h2 id="username"></h2>
+        <strong id="usertitle"></strong>
+
+        <div class="horizontalLine"></div>
+
+        <h2 id="objectiveSection">Objective:</h2>
+        <p id="userobjective"></p>
+
+        <div class="horizontalLine"></div>
+
+        <h2 id="Contact-Info">Contact Info:</h2>
+        <strong>Phone No:</strong>
+        <p id="userphoneNo"></p>
+        <strong>Email: </strong>
+        <p id="useremail"></p>
+        <strong id="socialhandlesSection">Social Handles: </strong>
+        <p id="usersocialhandles"></p>
+
+        <div class="horizontalLine"></div>
+
+        <h2 id="UserEducation">Education: </h2>
+        <strong>
+        <span id="display-startdate"></span> - 
+        <span id="display-enddate"></span>
+        </strong>
+        <strong>School: </strong>
+        <p id="userschool"></p>
+        <strong>Degree: </strong>
+        <p id="userdegree"></p>
+        <strong>Grade: </strong>
+        <p id="usergrade"></p>
+
+        <div class="horizontalLine"></div>
+
+
+        <h2 id="UserSkills">Skills: </h2>
+        <p id="userskills"></p>
+
+        <div class="horizontalLine"></div>
+            
+        <h2 id="UserExperience">Work Experience: </h2>
+        <strong>Duration: </strong>
+        <p id="userduration"></p>
+        <strong>Position: </strong>
+        <p id="userposition"></p>
+        <strong>Company Name: </strong>
+        <p id="usercompany"></p>
+        
+
+        <br>
+        <br>
+
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <button id="downloadaspdf">Download as PDF</button>
+    </div>
+
+<br>
+<br>
+
+<p id="Developer">Generated by 💫 Syeda Ayesha</p>
+
+<script src="script.js"></script>
+</body>
+</html>
